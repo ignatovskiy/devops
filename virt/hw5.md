@@ -51,12 +51,15 @@ docker service ls
 
 ```
 [centos@node01 ~]$ sudo docker service ls
-ID             NAME                                MODE         REPLICAS   IMAGE                                      PORTS
-6di3r32kls02   swarm_monitoring_caddy              replicated   1/1        stefanprodan/caddy:latest                  *:3000->3000/tcp, *:9090->9090/tcp, *:9093-9094->9093-9094/tcp
-57fhi0fjww9z   swarm_monitoring_cadvisor           global       6/6        google/cadvisor:latest
-nvgkrp6w6yxn   swarm_monitoring_dockerd-exporter   global       6/6        stefanprodan/caddy:latest
-t887mgtsmyb6   swarm_monitoring_grafana            replicated   1/1        stefanprodan/swarmprom-grafana:5.3.4
-07s4hrq05b7a   swarm_monitoring_prometheus         replicated   1/1        stefanprodan/swarmprom-prometheus:v2.5.0
+ID             NAME                                MODE         REPLICAS   IMAGE                                          PORTS
+ms9dxvrjiizt   swarm_monitoring_alertmanager       replicated   1/1        stefanprodan/swarmprom-alertmanager:v0.14.0
+9cptbuiu8zn7   swarm_monitoring_caddy              replicated   1/1        stefanprodan/caddy:latest                      *:3000->3000/tcp, *:9090->9090/tcp, *:9093-9094->9093-9094/tcp
+yl45oeqvyv7n   swarm_monitoring_cadvisor           global       6/6        google/cadvisor:latest
+u1cn2h0sskp5   swarm_monitoring_dockerd-exporter   global       6/6        stefanprodan/caddy:latest
+wbf5ad2qufii   swarm_monitoring_grafana            replicated   1/1        stefanprodan/swarmprom-grafana:5.3.4
+8ayep666jjk4   swarm_monitoring_node-exporter      global       6/6        stefanprodan/swarmprom-node-exporter:v0.16.0
+21eh9fjna3s0   swarm_monitoring_prometheus         replicated   1/1        stefanprodan/swarmprom-prometheus:v2.5.0
+wkz54ljm28la   swarm_monitoring_unsee              replicated   1/1        cloudflare/unsee:v0.8.0
 ```
 
 ![](./assets/5-3.png)
