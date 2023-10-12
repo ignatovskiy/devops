@@ -30,3 +30,18 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network & subnet name"
 }
+
+variable "project" {
+  type = string
+  default = "netology"
+}
+
+variable "env" {
+  type = string
+  default = "develop"
+}
+
+variable "product" {
+  type = string
+  default = "platform"
+}
